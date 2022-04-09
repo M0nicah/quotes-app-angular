@@ -7,6 +7,7 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  title = 'Welcome to Quotey quotes';
   quotes: Quotes[] = [
     {quote: 'Good things take time', author: 'Monica Masae' },
     {quote: 'Positivity always wins',author: 'Monica Masae' },
