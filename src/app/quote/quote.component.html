@@ -1,1 +1,14 @@
-<app-quote></app-quote>
+<body class="bg-pink-50 w-full h-screen font-light p-5 text-lg">
+  <div class="p-3 w-full justify-center items-center flex mx-auto rounded">
+    <h1 class="text-5xl font-mono text-pink-500">Quotes App</h1>
+  </div>
+  <h1 class="font-bold text-2xl">Quotes Here</h1>
+  <div class="bg-white p-5 w-96 h-60 mt-5 justify-center items-center">
+    <ul>
+      <li *ngFor="let quote of quotes">
+        {{ quote.quote }}
+        <app-quote-details [quote]='quote'></app-quote-details>
+      </li>
+    </ul>
+  </div>
+</body>
