@@ -1,5 +1,13 @@
 export class Quotes {
-  public quote!: String;
-  public author!: String;
+  showDescription: boolean;
 
+  constructor(
+    public id: Number,
+    public quote: String,
+    public author: String,
+    public description: String,
+    
+  ) {
+    this.showDescription = false;
+  }
 }
