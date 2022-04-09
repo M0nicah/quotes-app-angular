@@ -6,13 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quotes App</title>
 </head>
-<body class="bg-gray-100 w-full h-screen">
+<body class="bg-pink-50 w-full h-screen font-light p-5 text-lg">
   <div class=" p-3 w-full justify-center items-center flex mx-auto rounded">
-    <h1 class="text-2xl font-mono text-pink-800">Quotes App</h1>
+    <h1 class="text-5xl font-mono text-pink-500 ">Quotes App</h1>
   </div>
   <div>
-    <app-quote-form></app-quote-form>
-    <app-quote-card></app-quote-card>
+   <h1 class="font-bold text-2xl">Quotes Here</h1>
+   <ul>
+     <li *ngFor="let quote of quotes">
+       {{ quotes }}
+     </li>
+   </ul>
+    
   </div>
 </body>
 </html>
