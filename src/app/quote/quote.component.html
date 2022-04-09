@@ -3,16 +3,21 @@
     <h1 class="text-5xl font-mono text-pink-500">{{title}}</h1>
   </div>
   <h1 class="font-bold text-2xl"></h1>
-  <div class="bg-gradient-to-r from-pink-400 via-white to-blue-400 rounded-2xl shadow-2xl p-5 w-full h-5/6 mt-5 justify-center items-center flex mx-auto">
+  <div class="bg-gradient-to-r from-pink-400 via-gray-300 to-blue-400 rounded-2xl shadow-2xl p-10 w-full h-5/6 mt-5 justify-start items-center flex mx-auto">
       <ul>
         <div *ngFor="let quote of quotes; let i = index">
-            <li>
-                {{ quote.quote }}
+            <li class="text-lg font-normal">
+                {{ quote.quote }}.  
             </li>
-            <button (click)="toggleDetails(i)">See More</button>
-        
+            <li class="text-sm font-thin">
+              Posted on {{ quote.postedDate|date }}
+            </li>
+            <li class="text-sm font-extralight">
+               by {{ quote.author }}.
+            </li>
+            <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-5 rounded-xl">See More</button>
             <div *ngIf="quote.showDescription">
-                <app-quote-details *ngIf='quote.showDescription', [quote]='quote', (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
+                <app-quote-details *ngIf='quote.showDescription', [quote]='quote', (isRead) = 'deleteQuote($event,i)'></app-quote-details>
             </div>
         </div>
 

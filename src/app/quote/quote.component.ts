@@ -10,21 +10,24 @@ import { Quotes } from '../quotes';
 export class QuoteComponent implements OnInit {
   title = 'Welcome to Quotey quotes';
   quotes: Quotes[] = [
-    new Quotes(1, 'Good things take time', 'Monica Masae', 'written by unknown'),
-    new Quotes(2, 'Positivity always wins', 'Monica Masae', 'written by unknown'),
-    new Quotes(3, 'The best is yet to come', 'Monica Masae', 'written by unknown'),
+    new Quotes(1, '"Good things take time"', 'Monica Masae', 'written by unknown' , new Date (2021,0o7,18)),
+    new Quotes(2, '"Positivity always wins"', 'Monica Masae', 'written by unknown' , new Date (2022,10,0o2)),
+    new Quotes(3, '"The best is yet to come"', 'Monica Masae', 'written by unknown', new Date (2021,12,25)),
   ];
 
   toggleDetails(index: any) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
-  deleteQuote(isComplete: any, index: number){
-    if (isComplete) {
-      this.quotes.splice(index,1);
+  deleteQuote(isRead: any, index: number){
+    if (isRead) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
     }
   }
-
   constructor() {}
 
   ngOnInit(): void {}
