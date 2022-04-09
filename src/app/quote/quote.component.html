@@ -1,16 +1,16 @@
 <div class="bg-pink-50 w-full h-screen font-light p-5 text-lg container ">
     <div class="row">
-        <div class="col">
+        <div class="">
             <div class="p-3 w-full justify-center items-center flex mx-auto rounded">
-                <h1 class="text-5xl font-mono text-pink-500">{{title}}</h1>
+                <h1 class="text-5xl font-mono text-pink-500">{{title}} ✔️</h1>
               </div>
               <h1 class="font-bold text-2xl"></h1>
               <div class="bg-gradient-to-r from-pink-400 via-gray-300 to-blue-400 rounded-2xl shadow-2xl p-10 w-full h-5/6 mt-5 justify-start items-center flex mx-auto">
                   <ul>
-                    <div *ngFor="let quote of quotes; let i = index" class="col">
-                        <div class="bg-pink-200 rounded-lg p-2 w-96 text-center mb-5 mt-5">
+                    <div *ngFor="let quote of quotes; let i = index">
+                        <!-- <div class="bg-pink-100 rounded-lg p-2 w-96 text-center mb-5 mt-5 col-md-6">
                             <li class="text-lg fw-bolder text-center">
-                                {{ quote.quote }}.  
+                               📌 {{ quote.quote }}.  
                             </li>
                             <li class="text-sm font-extralight">
                                 by {{ quote.author }}.
@@ -18,14 +18,40 @@
                             <li class="text-sm font-thin">
                                 Posted on {{ quote.postedDate|date }}
                             </li>
-                            <button (click)="toggleDetails(i)" class="bg-pink-300 text-pink-600 p-2 my-3 rounded-xl">See More</button>
+                            <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                              <div class="card mt-5">
+                                <div class="card-body">
+                                  <h5 class="card-title font-medium">📌{{  quote.quote }}</h5>
+                                  <p class="card-text">by {{ quote.author }}.</p>
+                                  <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
+                                  <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="card mt-5">
+                                <div class="card-body">
+                                  <h5 class="card-title font-medium">📌{{  quote.quote }}</h5>
+                                  <p class="card-text">by {{ quote.author }}.</p>
+                                  <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
+                                  <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
+                                </div>
+                              </div>
+                            </div>
                         </div>
-                        
                         <div *ngIf="quote.showDescription">
                             <app-quote-details *ngIf='quote.showDescription', [quote]='quote', (isRead) = 'deleteQuote($event,i)'></app-quote-details>
                         </div>
+                        
                     </div>
+                    
                   </ul>
+                  <div class="col-md-6">
+                    <app-quote-form></app-quote-form>
+                  </div>
               </div>
         </div>
     </div>
