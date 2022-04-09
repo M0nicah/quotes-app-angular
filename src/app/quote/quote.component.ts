@@ -13,6 +13,10 @@ export class QuoteComponent implements OnInit {
     new Quotes(1, '"Good things take time"', 'Monica Masae', 'written by unknown' , new Date (2021,0o7,18)),
     new Quotes(2, '"Positivity always wins"', 'Monica Masae', 'written by unknown' , new Date (2022,10,0o2)),
     new Quotes(3, '"The best is yet to come"', 'Monica Masae', 'written by unknown', new Date (2021,12,25)),
+    new Quotes(4, '"Good things take time"', 'Monica Masae', 'written by unknown' , new Date (2021,0o7,18)),
+    new Quotes(5, '"Positivity always wins"', 'Monica Masae', 'written by unknown' , new Date (2022,10,0o2)),
+    new Quotes(6, '"The best is yet to come"', 'Monica Masae', 'written by unknown', new Date (2021,12,25)),
+    
   ];
 
   toggleDetails(index: any) {
