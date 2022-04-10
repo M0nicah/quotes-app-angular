@@ -8,6 +8,7 @@ It allows users to add and modify their favorite quotes.
 
 ### Live link
 
+Click to view [project](https://m0nicah.github.io/quotes-app-angular/)
 
 ## Author
 
