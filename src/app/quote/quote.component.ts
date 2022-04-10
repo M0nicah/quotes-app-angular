@@ -25,10 +25,10 @@ export class QuoteComponent implements OnInit {
     }
   }
 
-  showDescription = true;
+  showDatePosted = true;
  
   toggleDetails(index: any){
-    this.quotes[index].showAuthor = !this.quotes[index].showAuthor
+    this.quotes[index].showDatePosted = !this.quotes[index].showDatePosted
   }
 
   addNewQuote(Quote:any){

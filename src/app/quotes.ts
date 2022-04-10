@@ -1,6 +1,6 @@
 
 export class Quotes {
-  showAuthor: boolean = false;
+  showDatePosted: boolean = false;
   
 
   constructor(
