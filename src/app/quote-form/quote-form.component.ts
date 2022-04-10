@@ -7,11 +7,14 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote-form.component.css'],
 })
 export class QuoteFormComponent implements OnInit {
+  [x: string]: any;
   newQuote = new Quotes(0, '', '', '', '', new Date());
+
   @Output() addQuote =  new EventEmitter<Quotes>();
 
   addNewQuote(){
     this.addQuote.emit(this.newQuote);
+    this.newQuote = new Quotes(0,"","","","",new Date());
   }
 
   constructor() {}

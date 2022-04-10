@@ -1,6 +1,7 @@
 
 export class Quotes {
   showAuthor: boolean = false;
+  
 
   constructor(
     public id: number,

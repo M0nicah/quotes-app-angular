@@ -1,3 +1,4 @@
+import { Quote } from '@angular/compiler';
 
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
@@ -14,10 +15,6 @@ export class QuoteComponent implements OnInit {
     new Quotes(2, 'Monica', 'Motivation', "Positivity always wins", 'Unknown', new Date (2022,9,0o2)),
   ];
 
-  // toggleDetails(index: any) {
-  //   this.quotes[index].showDescription = !this.quotes[index].showDescription;
-  // }
-
   deleteQuote(isRead: any, index: number){
     if (isRead) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
@@ -33,6 +30,12 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index: any){
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor
   }
+
+  addNewQuote(Quote:any){
+    let quoteLength = this.quotes.length;
+    this.quotes.push(Quote);
+  }
+
   constructor() {
     
   }

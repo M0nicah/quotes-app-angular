@@ -22,20 +22,6 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="col">
-                              <div class="card mt-5">
-                                <div class="card-body">
-                                  <h5 class="card-title font-medium">📌{{  quote.quote }}</h5>
-                                  <p class="card-text">by {{ quote.author }}.</p>
-                                  <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
-                                  <div *ngIf="!showDescription">
-                                    <p class="card-text">Posted on {{ quote.datePosted|date }}</p>
-                                      {{ quote.author }}
-                                  </div>
-
-                                </div>
-                              </div>
-                            </div>
                         </div>
                         <div *ngIf="quote.author">
                             <app-quote-details *ngIf='quote.author', [quote]='quote'></app-quote-details>
