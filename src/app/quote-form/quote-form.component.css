@@ -1,9 +1,10 @@
 .form-control{
-    color: whitesmoke;
+    color: black;
     font-weight: 570;
+    padding: 0.5rem;
   }
   label{
-    color: black;
+    color: rgb(43, 40, 40);
     font-weight: 600;
   }
   hr{
@@ -15,12 +16,13 @@
     color: black;
     text-align: center;
     padding-top: 2%;
+    font-weight: 700;
   }
   .container-fluid{
     background-color: #f4c0e3db;
     border-radius: 4px;
     padding-bottom: 5%;
     box-shadow: 2px 2px 3px 2px rgb(250, 171, 210);
-    font-family:  cursive;
     margin-bottom: 5%;
   }
+  

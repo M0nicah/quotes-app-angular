@@ -8,20 +8,8 @@
               <div class="bg-gradient-to-r from-pink-400 via-gray-300 to-blue-400 rounded-2xl shadow-2xl p-10 w-full h-5/6 mt-5 justify-start items-center flex mx-auto">
                   <ul>
                     <div *ngFor="let quote of quotes; let i = index">
-                        <!-- <div class="bg-pink-100 rounded-lg p-2 w-96 text-center mb-5 mt-5 col-md-6">
-                            <li class="text-lg fw-bolder text-center">
-                               📌 {{ quote.quote }}.  
-                            </li>
-                            <li class="text-sm font-extralight">
-                                by {{ quote.author }}.
-                           </li>
-                            <li class="text-sm font-thin">
-                                Posted on {{ quote.postedDate|date }}
-                            </li>
-                            <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
-                        </div> -->
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col">
                               <div class="card mt-5">
                                 <div class="card-body">
                                   <h5 class="card-title font-medium">📌{{  quote.quote }}</h5>
@@ -34,7 +22,7 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col">
                               <div class="card mt-5">
                                 <div class="card-body">
                                   <h5 class="card-title font-medium">📌{{  quote.quote }}</h5>
@@ -57,7 +45,7 @@
                     
                   </ul>
                   <div class="col-md-6 m-16">
-                    <app-quote-form></app-quote-form>
+                    <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
                   </div>
               </div>
         </div>

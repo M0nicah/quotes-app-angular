@@ -1,3 +1,4 @@
+
 export class Quotes {
   showAuthor: boolean = false;
 
