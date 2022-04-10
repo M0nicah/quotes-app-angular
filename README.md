@@ -1,6 +1,17 @@
 # QuotesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4. 
+
+### Description
+
+It allows users to add and modify their favorite quotes.
+
+### Live link
+
+
+## Author
+
+[Monica Masae](https://github.com/M0nicah)
 
 ## Development server
 
