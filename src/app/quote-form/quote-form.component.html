@@ -2,7 +2,7 @@
   <div class="container-fluid bg-gradient-to-r from-blue-400 via-gray-200 to-pink-400">
     <h2 class="heading mt-5 mb-5">Add New Quote 📝</h2>
     <!-- <hr> -->
-    <form (ngSubmit)='addNewQuote()' #quotesForm='ngForm'>
+    <form (ngSubmit)='addNewQuote(); quotesForm.resetForm({})' #quotesForm='ngForm'>
         <div class="form-group">
           <label for="name">Your Name:</label>
           <input type="text" required class="form-control" id="name"  name="name"  minlength="3" [(ngModel)]="newQuote.name" #name="ngModel" placeholder="Enter your name...">
