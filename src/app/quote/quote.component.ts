@@ -10,8 +10,8 @@ import { Quotes } from '../quotes';
 export class QuoteComponent implements OnInit {
   title = 'Welcome to Quotey quotes';
   quotes: Quotes[] = [
-    new Quotes(1, '"Good things take time"', 'Monica Masae', 'written by Unknown' , new Date (2021,6,18)),
-    new Quotes(2, '"Positivity always wins"', 'Monica Masae', 'written by Unknown' , new Date (2022,9,0o2)),
+    new Quotes(1, 'Monica', 'Life', "Good things take time", 'Unknown', new Date (2021,6,18)),
+    new Quotes(2, 'Monica', 'Motivation', "Positivity always wins", 'Unknown', new Date (2022,9,0o2)),
   ];
 
   // toggleDetails(index: any) {
@@ -31,7 +31,7 @@ export class QuoteComponent implements OnInit {
   showDescription = true;
  
   toggleDetails(index: any){
-    this.quotes[index].showDescription = !this.quotes[index].showDescription
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor
   }
   constructor() {
     

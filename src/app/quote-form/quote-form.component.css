@@ -1,24 +1,23 @@
 .form-control{
-    color: white;
-    background: transparent;
+    color: whitesmoke;
     font-weight: 570;
   }
   label{
-    color: white;
+    color: black;
     font-weight: 600;
   }
   hr{
     width: 50%;
     height: 2px;
-    background-color: hotpink;
+    
   }
   .heading{
-    color: white;
+    color: black;
     text-align: center;
     padding-top: 2%;
   }
   .container-fluid{
-    background-color: rgba(0, 0, 0, 0.374);
+    background-color: #f4c0e3db;
     border-radius: 4px;
     padding-bottom: 5%;
     box-shadow: 2px 2px 3px 2px rgb(250, 171, 210);

@@ -28,8 +28,8 @@
                                   <p class="card-text">by {{ quote.author }}.</p>
                                   <button (click)='toggleDetails(i)' class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
                                   <div *ngIf="!showDescription">
-                                    <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
-                                      {{ quote.description }}
+                                    <p class="card-text">Posted on {{ quote.datePosted|date }}</p>
+                                      {{ quote.author }}
                                   </div>
                                 </div>
                               </div>
@@ -41,16 +41,16 @@
                                   <p class="card-text">by {{ quote.author }}.</p>
                                   <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
                                   <div *ngIf="!showDescription">
-                                    <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
-                                      {{ quote.description }}
+                                    <p class="card-text">Posted on {{ quote.datePosted|date }}</p>
+                                      {{ quote.author }}
                                   </div>
 
                                 </div>
                               </div>
                             </div>
                         </div>
-                        <div *ngIf="quote.description">
-                            <app-quote-details *ngIf='quote.description', [quote]='quote'></app-quote-details>
+                        <div *ngIf="quote.author">
+                            <app-quote-details *ngIf='quote.author', [quote]='quote'></app-quote-details>
                         </div>
                         
                     </div>
