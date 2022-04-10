@@ -21,46 +21,44 @@
                             <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
                         </div> -->
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                               <div class="card mt-5">
                                 <div class="card-body">
                                   <h5 class="card-title font-medium">📌{{  quote.quote }}</h5>
                                   <p class="card-text">by {{ quote.author }}.</p>
-                                  <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
-                                  <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
-                                  <div >
+                                  <button (click)='toggleDetails(i)' class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
+                                  <div *ngIf="!showDescription">
+                                    <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
                                       {{ quote.description }}
-
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-6">
                               <div class="card mt-5">
                                 <div class="card-body">
                                   <h5 class="card-title font-medium">📌{{  quote.quote }}</h5>
                                   <p class="card-text">by {{ quote.author }}.</p>
-                                  <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
                                   <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
-                                  <div >
-                                    {{ quote.description }}
-
-                                </div>
+                                  <div *ngIf="!showDescription">
+                                    <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
+                                      {{ quote.description }}
+                                  </div>
 
                                 </div>
                               </div>
                             </div>
                         </div>
-                        <div *ngIf="quote.showDescription">
-                            <app-quote-details *ngIf='quote.showDescription', [quote]='quote', (isRead) = 'deleteQuote($event,i)'></app-quote-details>
+                        <div *ngIf="quote.description">
+                            <app-quote-details *ngIf='quote.description', [quote]='quote'></app-quote-details>
                         </div>
                         
                     </div>
                     
                   </ul>
-                  <!-- <div class="col-md-6">
+                  <div class="col-md-6 m-16">
                     <app-quote-form></app-quote-form>
-                  </div> -->
+                  </div>
               </div>
         </div>
     </div>

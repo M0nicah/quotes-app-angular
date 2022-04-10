@@ -9,6 +9,7 @@ import { Quotes } from '../quotes';
 export class QuoteDetailsComponent implements OnInit {
   @Input()
   quote!: Quotes;
+
   @Output() isRead = new EventEmitter<boolean>();
 
   quoteDelete(read: boolean) {

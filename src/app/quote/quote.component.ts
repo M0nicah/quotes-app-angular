@@ -12,13 +12,11 @@ export class QuoteComponent implements OnInit {
   quotes: Quotes[] = [
     new Quotes(1, '"Good things take time"', 'Monica Masae', 'written by Unknown' , new Date (2021,6,18)),
     new Quotes(2, '"Positivity always wins"', 'Monica Masae', 'written by Unknown' , new Date (2022,9,0o2)),
-    new Quotes(3, '"The best is yet to come"', 'Monica Masae', 'written by Unknown', new Date (2021,12,25)),
-    
   ];
 
-  toggleDetails(index: any) {
-    this.quotes[index].showDescription = !this.quotes[index].showDescription;
-  }
+  // toggleDetails(index: any) {
+  //   this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  // }
 
   deleteQuote(isRead: any, index: number){
     if (isRead) {
@@ -29,7 +27,15 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  constructor() {}
+
+  showDescription = true;
+ 
+  toggleDetails(index: any){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription
+  }
+  constructor() {
+    
+  }
 
   ngOnInit(): void {}
 }
