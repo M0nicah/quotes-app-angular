@@ -10,9 +10,9 @@ import { Quotes } from '../quotes';
 export class QuoteComponent implements OnInit {
   title = 'Welcome to Quotey quotes';
   quotes: Quotes[] = [
-    new Quotes(1, '"Good things take time"', 'Monica Masae', 'written by unknown' , new Date (2021,0o7,18)),
-    new Quotes(2, '"Positivity always wins"', 'Monica Masae', 'written by unknown' , new Date (2022,10,0o2)),
-    new Quotes(3, '"The best is yet to come"', 'Monica Masae', 'written by unknown', new Date (2021,12,25)),
+    new Quotes(1, '"Good things take time"', 'Monica Masae', 'written by Unknown' , new Date (2021,6,18)),
+    new Quotes(2, '"Positivity always wins"', 'Monica Masae', 'written by Unknown' , new Date (2022,9,0o2)),
+    new Quotes(3, '"The best is yet to come"', 'Monica Masae', 'written by Unknown', new Date (2021,12,25)),
     
   ];
 

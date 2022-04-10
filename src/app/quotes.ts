@@ -1,5 +1,5 @@
 export class Quotes {
-  showDescription: boolean;
+  showDescription: boolean=false;
 
   constructor(
     public id: number,

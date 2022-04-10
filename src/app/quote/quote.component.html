@@ -28,6 +28,10 @@
                                   <p class="card-text">by {{ quote.author }}.</p>
                                   <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
                                   <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
+                                  <div >
+                                      {{ quote.description }}
+
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -38,6 +42,11 @@
                                   <p class="card-text">by {{ quote.author }}.</p>
                                   <p class="card-text">Posted on {{ quote.postedDate|date }}</p>
                                   <button (click)="toggleDetails(i)" class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
+                                  <div >
+                                    {{ quote.description }}
+
+                                </div>
+
                                 </div>
                               </div>
                             </div>
@@ -49,9 +58,9 @@
                     </div>
                     
                   </ul>
-                  <div class="col-md-6">
+                  <!-- <div class="col-md-6">
                     <app-quote-form></app-quote-form>
-                  </div>
+                  </div> -->
               </div>
         </div>
     </div>
