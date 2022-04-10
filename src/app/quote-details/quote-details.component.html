@@ -1,6 +1,7 @@
 <div class="justify-center items-center mt-1">
-    <p class=" italic text-sm font-bold mt-2">Posted By:{{ quote.name }}</p>
-    <p class=" italic text-sm font-bold mt-2">Posted on:{{ quote.datePosted|date }}</p>
+    <p class="text-sm font-normal mt-2">Posted By: <caption>~{{ quote.name }}</caption>
+    <p class="text-sm font-normal mt-2">Posted on: {{ quote.datePosted|date}} .</p>
+    <p class="text-sm font-normal mt-2">Posted : {{ quote.datePosted|dateCount }} days ago.</p>
     <button (click)= 'deleteQuote(true)' id="delete" class="bg-white text-red-600 p-2 rounded-xl hover:bg-red-600 mt-1">Delete</button>
 
 </div>

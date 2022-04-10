@@ -18,7 +18,7 @@
                                   <p class="card-text text-base">by {{ quote.author }}.</p>
                                   <button (click)='toggleDetails(i)' class="bg-pink-200 text-pink-600 p-2 my-3 rounded-xl">See More</button>
                                   <div *ngIf="!showDatePosted">
-                                    <p class="card-text">Posted on {{ quote.datePosted|date }} </p>
+                                    <p class="card-text">Posted on {{ quote.datePosted|date|dateCount }} </p>
                                       {{ quote.author }}
                                   </div>
                                   

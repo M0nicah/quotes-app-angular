@@ -11,8 +11,8 @@ import { Quotes } from '../quotes';
 export class QuoteComponent implements OnInit {
   title = 'Welcome to Quotey quotes';
   quotes: Quotes[] = [
-    new Quotes(1, 'Monica', 'Life', "Good things take time", 'Unknown', new Date (2021,6,18)),
-    new Quotes(2, 'Monica', 'Motivation', "Positivity always wins", 'Unknown', new Date (2022,9,0o2)),
+    new Quotes(1, 'Monica', 'Life', '"Good things take time"', 'Unknown', new Date (2021,6,18)),
+    new Quotes(2, 'Monica', 'Motivation', '"Positivity always wins"', 'Unknown', new Date (2022,9,0o2)),
   ];
 
   deleteQuote(isRead: any, index: number){
