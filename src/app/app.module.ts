@@ -1,4 +1,4 @@
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,7 +22,6 @@ import { DateCountPipe } from './date-count.pipe';
     
   ],
   imports: [
-    FontAwesomeModule,
     BrowserModule,
     FormsModule,
     

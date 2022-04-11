@@ -1,7 +1,5 @@
-
 export class Quotes {
   showDatePosted: boolean = false;
-  
 
   constructor(
     public id: number,
@@ -11,7 +9,6 @@ export class Quotes {
     public author: string,
     public datePosted: Date,
     public likes: number,
-    public dislikes: number,
-
+    public dislikes: number
   ) {}
 }

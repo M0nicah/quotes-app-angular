@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Quotes } from './quotes';
 
 @Component({
@@ -8,6 +8,7 @@ import { Quotes } from './quotes';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  [x: string]: any;
 
   constructor() {
     
