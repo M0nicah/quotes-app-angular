@@ -10,6 +10,8 @@ export class Quotes {
     public quote: string,
     public author: string,
     public datePosted: Date,
+    public likes: number,
+    public dislikes: number,
 
   ) {}
 }

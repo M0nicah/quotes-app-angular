@@ -2,6 +2,11 @@
     <p class="text-sm font-normal mt-2">Posted By: <caption>~{{ quote.name }}</caption>
     <p class="text-sm font-normal mt-2">Posted on: {{ quote.datePosted|date}} .</p>
     <p class="text-sm font-normal mt-2">Posted : {{ quote.datePosted|dateCount }} days ago.</p>
+    <div class=" text-pink-50 text-sm flex justify-evenly my-3">
+        <button class="bg-blue-400 w-22 h-8 p-2 rounded" (click)="upvote()">upvotes: {{ quote.likes }}</button>
+        <button class="bg-blue-400 w-22 p-2 h-8 rounded" (click)="downvote()">downvotes: {{ quote.dislikes }}</button>
+    </div>
+    
     <button (click)= 'deleteQuote(true)' id="delete" class="bg-white text-red-600 p-2 rounded-xl hover:bg-red-600 mt-1">Delete</button>
 
 </div>
