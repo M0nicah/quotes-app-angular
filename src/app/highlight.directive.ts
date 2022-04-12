@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Host, HostListener } from '@angular/core';
-import { count } from 'console';
-import { hostname } from 'os';
+
+
 
 @Directive({
   selector: '[appHighlight]'
